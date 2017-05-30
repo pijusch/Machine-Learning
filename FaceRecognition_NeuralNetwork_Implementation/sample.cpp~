@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+
+	FILE *f= fopen("an2i_left_happy_sunglasses_4.pgm","rb");
+	int m,n,maxgreyscaleval;
+	char pgmtype[3];
+	fscanf(f,"%s",pgmtype);
+	fscanf(f,"%d %d\n%d",&m,&n,&maxgreyscaleval);
+	fgetc(f);
+	for(int i=0;i<32;i++)
+	{
+		int ch;
+		for(int j=0;j<30;j++)
+		{
+			ch = fgetc(f);
+			printf("%d ",ch);
+			//input[c][i*30+j] = ch*1.0/255;
+		}
+	}
+return 0;
+}
